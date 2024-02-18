@@ -1,0 +1,30 @@
+name: Docker Compose
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Run Docker Compose
+      run: |
+        echo "$(date)" >> DCLogs.txt
+        docker-compose up &>> DCLogs.txt
+
+    - name: Upload log file
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: DCLogs
+        path: DCLogs.txt
