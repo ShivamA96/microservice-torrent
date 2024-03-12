@@ -43,5 +43,5 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-          docker build -t shivamarora96/torrent-microservice:latest .
-          docker push shivamarora96/torrent-microservice:latest
+          docker build 
+          docker push 
