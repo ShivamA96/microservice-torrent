@@ -1,76 +1,76 @@
-# version: "3.3"
-# services:
-#   user_service:
-#     build: ./user_service
-#     ports:
-#       - 8008:8008
-#   torrent_service:
-#     build: ./torrent_service
-#     ports:
-#       - 8007:8007
-#   search_service:
-#     build: ./search_service
-#     ports:
-#       - 8006:8006
-#   comment_service:
-#     build: ./comment_service
-#     ports:
-#       - 8003:8003
-#   file_service:
-#     build: ./file_service
-#     ports:
-#       - 8004:8004
-#   rating_service:
-#     build: ./rating_service
-#     ports:
-#       - 8005:8005
-#   admin_service:
-#     build: ./admin_service
-#     ports:
-#       - 8000:8000
-#   auth_service:
-#     build: ./auth_service
-#     ports:
-#       - 8001:8001
-#   chatroom_service:
-#     build: ./chatroom_service
-#     ports:
-#       - 8002:8002
 version: "3.3"
 services:
   user_service:
-    image: shivamarora96/user_service:latest
-    build:
-      context: ./user_service
+    build: ./user_service
+    ports:
+      - 8008:8008
   torrent_service:
-    image: shivamarora96/torrent_service:latest
-    build:
-      context: ./torrent_service
+    build: ./torrent_service
+    ports:
+      - 8007:8007
   search_service:
-    image: shivamarora96/search_service:latest
-    build:
-      context: ./search_service
+    build: ./search_service
+    ports:
+      - 8006:8006
   comment_service:
-    image: shivamarora96/comment_service:latest
-    build:
-      context: ./comment_service
+    build: ./comment_service
+    ports:
+      - 8003:8003
   file_service:
-    image: shivamarora96/file_service:latest
-    build:
-      context: ./file_service
+    build: ./file_service
+    ports:
+      - 8004:8004
   rating_service:
-    image: shivamarora96/rating_service:latest
-    build:
-      context: ./rating_service
+    build: ./rating_service
+    ports:
+      - 8005:8005
   admin_service:
-    image: shivamarora96/admin_service:latest
-    build:
-      context: ./admin_service
+    build: ./admin_service
+    ports:
+      - 8000:8000
   auth_service:
-    image: shivamarora96/auth_service:latest
-    build:
-      context: ./auth_service
+    build: ./auth_service
+    ports:
+      - 8001:8001
   chatroom_service:
-    image: shivamarora96/chatroom_service:latest
-    build:
-      context: ./chatroom_service
+    build: ./chatroom_service
+    ports:
+      - 8002:8002
+# version: "3.3"
+# services:
+#   user_service:
+#     image: shivamarora96/user_service:latest
+#     build:
+#       context: ./user_service
+#   torrent_service:
+#     image: shivamarora96/torrent_service:latest
+#     build:
+#       context: ./torrent_service
+#   search_service:
+#     image: shivamarora96/search_service:latest
+#     build:
+#       context: ./search_service
+#   comment_service:
+#     image: shivamarora96/comment_service:latest
+#     build:
+#       context: ./comment_service
+#   file_service:
+#     image: shivamarora96/file_service:latest
+#     build:
+#       context: ./file_service
+#   rating_service:
+#     image: shivamarora96/rating_service:latest
+#     build:
+#       context: ./rating_service
+#   admin_service:
+#     image: shivamarora96/admin_service:latest
+#     build:
+#       context: ./admin_service
+#   auth_service:
+#     image: shivamarora96/auth_service:latest
+#     build:
+#       context: ./auth_service
+#   chatroom_service:
+#     image: shivamarora96/chatroom_service:latest
+#     build:
+#       context: ./chatroom_service
