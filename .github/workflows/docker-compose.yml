@@ -43,5 +43,5 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        docker-compose build
-        docker-compose push
+          docker build -t shivamarora96/monolithic-app:latest .
+          docker push shivamarora96/monolithic-app:latest
