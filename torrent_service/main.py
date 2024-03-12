@@ -1,5 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, File, UploadFile, Form
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from app.api import endpoints
 from uvicorn import run
 
 app = FastAPI()
@@ -12,9 +14,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-def read_root():
-    return {"This is the torrent microservice.": "Welcome to the torrent microservice."}
+app.include_router(endpoints.router)
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 if __name__ == "__main__":
     run(app, host="0.0.0.0", port=8007)
